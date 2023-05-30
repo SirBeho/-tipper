@@ -1,5 +1,5 @@
  /*****************************\
-|  Hecho por Benjamin tavarez.  |
+|  Hecho por Benjamin tavarez   |
  \*****************************/ 
 const form = document.getElementById("form");
 const botones = document.querySelectorAll(".propinas .btn");
