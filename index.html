@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png" />
+
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap" rel="stylesheet" />
+
+    <!-- BOOSTRAP only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+        
+    <link rel="stylesheet" href="style.css" />
+    <script src="./main.js" defer></script>
+    <title>Tip calculator</title>
+</head>
+
+<body>
+    <div class="vh-100 m-0 row" >
+        <!-- titulo/logo -->
+        <seccion class="row col-lg-12 align-items-center justify-content-center">
+            <div class="text-center">
+                <img class="" src="./images/logo.svg" alt="logo" />
+            </div>
+        </seccion>
+
+        <!-- Calculadora -->
+        <seccion class="container rounded-5 bg-white col-md-8 col-xl-6 align-self-start p-0">
+            <form class="form row justify-content-center p-4" id="form">
+
+                <!-- izq -->
+                <div class="izq col-sm-6 pe-5">
+
+                    <!-- input -->
+                    <section class="mb-4 ">
+                        <label class="form-label w-100" for="bill"> Bill </label>
+                        <div class="bl_input input-group-text ">
+                            <img src="./images/icon-dollar.svg" />
+                            <input class="text-end py-0 w-100" type="text" name="bill" id="bill" placeholder="0" />
+                        </div>
+                    </section>
+
+                    <!-- propina -->
+                    <section class="mb-4 me-2">
+                        <label class="form-label w-100">Select Tip %</label>
+                        <div class="propinas row row-cols-3">
+                            <div class="px-2">
+                                <button type="button" class="btn buttons fs-5  my-2 px-1 text-center" name="tip" value="05"> 5%</button>
+                            </div>
+                            <div class="px-2">
+                                <button type="button" class="btn buttons fs-5  my-2 px-1 text-center" name="tip" value="10"> 10%</button>
+                            </div>
+                            <div class="px-2">
+                                <button type="button" class="btn buttons fs-5  my-2 px-1 text-center"  name="tip" value="15"> 15%</button>
+                            </div>
+                            <div class="px-2">
+                                <button type="button" class="btn buttons fs-5  my-2 px-1 text-center"  name="tip" value="25"> 25%</button>
+                            </div>
+                            <div class="px-2">
+                                <button type="button" class="btn buttons fs-5  my-2 px-0 text-center"  name="tip" value="50"> 50%</button>
+                            </div>
+                            <div class="px-2">
+                                <input type="text" class="bl_input btn fs-5 my-2 px-1 text-end w-100"  name="tip" value="" id="tip" placeholder="Custom" />
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- nun perona -->
+                    <seccion class="mb-4">
+                        <label class="form-label w-100" for="nPeople">Number of People</label>
+                        <div id="bl_npeople" class="bl_input input-group-text  ">
+                            <img src="./images/icon-person.svg" />
+                            <input class="text-end py-0 w-100" type="text" name="numPeople" id="nPeople" placeholder="0" />
+                            <p id="error">Can 't be 0</p>
+                        </div>
+                    </seccion>
+                </div>
+
+                <!--Der -->
+                <div class="right col-sm-6 row justify-content-center px-0 px-md-3 py-5 me-2 rounded-4">
+                    <!-- Tip Amount -->
+                    <div class="row mb-3 ">
+                        <div class="col-4 p-0">
+                            <label class="form-label text-white fs-6">Tip Amount <br /> <strong>/person</strong></label>
+                        </div>
+                        <div class="col-8 p-0">
+                            <input id="tipAmount" class="w-100 text-end border-0 bg-transparent fs-1" type="text" placeholder="0.00" disabled />
+                        </div>
+                    </div>
+                    <!-- total -->
+                    <div class="row mb-5 ">
+                        <div class="col-4 p-0">
+                            <label class="form-label text-white">Total <br /><strong>/ person</strong></label>
+                        </div>
+                        <div class="col-7 p-0 col-xxl-8 ">
+                            <input id="totalAmount" class="form-control text-end bg-transparent border-0 fs-1 pe-0" type="text" placeholder="0.00" disabled />
+                        </div>
+                    </div>
+                    <!-- boton de reset -->
+                    <div class="row justify-content-center ">
+                        <button id="reset"  type="reset" class="btn rounded-2 w-100 reset" disabled > RESET</button>
+                    </div>
+                </div>
+               
+            </form>
+             
+        </seccion>
+     
+    </div>
+</body>
+</html>

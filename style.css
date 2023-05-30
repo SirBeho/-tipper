@@ -1,0 +1,91 @@
+ * {
+    color: hsl(186, 14%, 43%);
+    font-family: Space Mono;
+    margin: 0 ;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+body{
+    background-color: hsl(185, 42%, 84%);
+}
+
+input{
+    font-weight: bolder;
+    font-size: 2rem;
+    color: hsl(183, 100%, 15%);
+}
+
+ .bl_input,.bl_input *{
+   
+     background-color: hsl(189, 41%, 97%);  
+ }
+
+ .bl_input{
+     position: relative;
+    border: solid white 3px;
+    transition: color 0.5s;
+ }
+
+.bl_input > p {
+    background-color: transparent;  
+  visibility: hidden;
+  position: absolute;
+  bottom: 50%;
+  width: max-content;
+  font-size: 0.8rem;
+  color: hsl(0, 100%, 67%);
+  transition: bottom 1s;
+}
+
+.bl_input.error > p {
+  visibility: visible;
+  bottom: 95%;
+  left: 70%;
+}
+
+
+
+ .bl_input:focus-within{
+   border-color: #2bd8c1;
+ }
+
+ .bl_input input{
+    border: none;
+    outline: none;
+    caret-color: #2bd8c1 ;
+ }
+
+.right{
+    background-color: hsl(183, 100%, 15%);
+    
+
+}
+
+.buttons {
+    background-color: hsl(183, 100%, 15%);
+    color: #fff;
+    width: 100%;
+}
+
+.right input {
+    color: hsl(172, 67%, 45%);
+}
+
+#reset {
+    background-color: hsl(172, 67%, 45%);
+    color: hsl(183, 100%, 15%);
+}
+
+  
+
+.isSelected{
+    color: hsl(183, 100%, 15%);
+    background-color: hsl(172, 67%, 45%);
+}
+
+button:hover {
+    background-color: hsl(185, 41%, 84%)!important;
+      color: hsl(183, 100%, 15%)!important;
+
+}
