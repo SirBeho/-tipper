@@ -30,7 +30,7 @@ inputs.forEach((input) => {
   });
 });
 
-form.addEventListener("reset", (event) => {
+form.addEventListener("reset", () => {
   limpiar();
   reset.disabled = true;
 });
